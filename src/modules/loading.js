@@ -12,7 +12,7 @@ export const startLoading= createAction(
     requestType => requestType,
 );
 
-export const finshLoading= createAction(
+export const finishLoading= createAction(
     FINISH_LOADING,
     requestType => requestType,
 );

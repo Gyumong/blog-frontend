@@ -42,7 +42,7 @@ const WhiteBox= styled.div`
          <AuthTemplateBlock>
              <WhiteBox>
                  <div className="logo-area">
-                     <Link to="/">REACTERS</Link>
+                     <Link to="/">Gyumong</Link>
                  </div>
              {children}
              </WhiteBox>

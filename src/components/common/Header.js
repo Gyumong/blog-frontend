@@ -49,7 +49,7 @@ const HeaderBlock= styled.div`
           <>
             <HeaderBlock>
                 <Wrapper>
-                    <Link to="/" className="logo">Gyumong</Link>
+                    <Link to="/" className="logo">★Sedoll★</Link>
                     {user ?(
                         <div className="right">
                             <UserInfo>{user.username}</UserInfo>

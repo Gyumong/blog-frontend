@@ -19,3 +19,25 @@ const readPostSaga =createRequestSaga(READ_POST,postAPI.readPost);
 export function* postSaga(){
     yield takeLatest(READ_POST,readPostSaga);
 }
+
+const initalState= {
+    post:null,
+    error:null,
+};
+
+const post = handleActions(
+    {
+        [READ_POST_SUCCESS]:(state,{payload:post})=>({
+            ...state,
+            post,
+        }),
+        [READ_POST_FAILURE]:(state,{payload:error})=>({
+            ...state,
+            error,
+        }),
+        [UNLOAD_POST]:()=>initalState,
+    },
+    initalState,
+);
+
+export default post;

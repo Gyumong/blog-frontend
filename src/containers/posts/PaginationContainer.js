@@ -7,7 +7,7 @@ import qs from 'qs';
 const PaginationContainer = ({location})=>{
     const {lastPage,posts, loading} = useSelector(({posts,loading})=>({
         lastPage: posts.lastPage,
-        post:posts.posts,
+        posts:posts.posts,
         loading:loading['posts/LIST_POSTS'],
     }));
 
@@ -22,7 +22,7 @@ const PaginationContainer = ({location})=>{
         <Pagination
             tag={tag}
             username={username}
-            page={parseInt(page,10)}
+            page={parseInt(page,5)}
             lastPage={lastPage}
             />
     );

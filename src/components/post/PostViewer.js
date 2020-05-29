@@ -26,7 +26,7 @@ const PostContent =styled.div`
 `;
 
 
-const PostViewer = ({post,error,loading})=>{
+const PostViewer = ({post,error,loading,actionButtons})=>{
     // 에러 발생시
     if(error){
         if(error.response && error.response.status ===404){
@@ -51,6 +51,7 @@ const PostViewer = ({post,error,loading})=>{
                 />
                 <Tags tags={tags} />
             </PostHead>
+            {actionButtons}
             <PostContent
                 dangerouslySetInnerHTML={{__html:body}}
                 />
